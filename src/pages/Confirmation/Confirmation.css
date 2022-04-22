@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.confirmation{
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 50px;
+    background-color: aliceblue;
+    width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+h2 {
+    color: aqua;
+}
+
+.title {
+    color: red;
+}
+
+p{
+    text-align: center;
+    max-width: 300px;
+}
+
+span {
+    color:brown;
+}

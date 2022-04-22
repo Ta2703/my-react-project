@@ -1,0 +1,8 @@
+input {
+    width: 200px;
+    padding: 10px;
+    border: solid 1px rgb(113, 113, 168);
+    border-radius: 20px;
+    outline: none;
+    background-color: rgb(216, 228, 239);
+}

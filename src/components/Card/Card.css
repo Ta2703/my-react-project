@@ -1,0 +1,28 @@
+body {
+    background-color: rgb(196, 200, 241);
+}
+.card {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: auto;
+    color: rgb(196, 200, 241);
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
+    border: 1px solid;
+    padding: 10px 10px;
+}
+.imgCard {
+    align-self: center;
+    width: 200px;
+    border-radius: 12px;
+    margin: 0 auto;
+}
+.cardText {
+    font-size: 20px;
+    color: rgb(106, 109, 136);
+}
+.cardDate {
+    color: rgb(95, 97, 117);
+}

@@ -1,0 +1,13 @@
+.cardPage{
+    display: flex;
+    flex-direction: column;
+}
+.card {
+    width: 500px;
+    height: 500px;
+}
+
+.cardImg img{
+    width: 100%;
+}
+
