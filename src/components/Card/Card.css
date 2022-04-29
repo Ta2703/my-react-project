@@ -15,7 +15,7 @@ body {
 }
 .imgCard {
     align-self: center;
-    width: 200px;
+    width: 100%;
     border-radius: 12px;
     margin: 0 auto;
 }

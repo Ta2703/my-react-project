@@ -5,6 +5,15 @@ import Button from './components/Button';
 import PostCard from './components/PostCard';
 import Confirmation from './pages/Confirmation';
 import Template from './pages/Template';
+import CardPage from './pages/CardPage';
+import Header from './components/Header';
+import BurgerMenu from './components/BurgerMenu';
+import { ThemeModeProvider } from './context/ThemeModeProvider';
+import {Theme} from './context/themeModeContext';
+import Login from './pages/Login';
+import Registr from './pages/Registr';
+import HeaderPage from './pages/HeaderPage';
+
 
 // const MOCKDATA = [
 //     {
@@ -45,14 +54,24 @@ import Template from './pages/Template';
 //     },
 
 // ];
+// const App = () => {
+//   const [theme, setTheme] = useState(Theme.Light);
+
+//   const on
+// }
 
 function App() {
 return (
-  // <div className="App">
-  //   <PostCard data={MOCKDATA}/>
+  <ThemeModeProvider theme={Theme.Light}>
+<div className='App'>
+  <Login />
+</div>
+  
+  </ThemeModeProvider>
   // </div>
- <Template></Template>
+
+
 );
-}
+};
 
 export default App;

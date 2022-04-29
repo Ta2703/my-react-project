@@ -9,7 +9,7 @@ const Template = () => {
             <p>text</p>
             <div className="templateTitle">
                 <h3>Title</h3>
-                <Button text={'button'}></Button>
+                <Button className='btnTemplate' text={'button'}></Button>
             </div>
         </div>
     )

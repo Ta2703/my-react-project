@@ -1,0 +1,15 @@
+header {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    font-size: 18px;
+    align-items: flex-end;
+}
+
+#page-wrap {
+    box-sizing: border-box;
+    align-items: flex-end;
+    padding-top: 10px;
+    padding-top: 10px;
+    width: 60%;
+}

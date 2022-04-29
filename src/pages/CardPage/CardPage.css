@@ -1,13 +1,18 @@
 .cardPage{
     display: flex;
     flex-direction: column;
+
+    padding: 50px;
 }
 .card {
     width: 500px;
     height: 500px;
 }
-
-.cardImg img{
-    width: 100%;
+p {
+    font-size: 20px;
+    
 }
 
+h3, p{
+    color: rgb(75, 126, 157);
+}
