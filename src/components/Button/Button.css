@@ -1,4 +1,4 @@
-btn {
+button {
     width: 230px;
     height: 40px;
     border-radius: 20px;
@@ -8,4 +8,5 @@ btn {
     outline: none;
     font-size: 15px;
     text-align: center;
+    margin-top: 10px;
 }

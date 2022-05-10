@@ -15,8 +15,8 @@ const CardPage = (props:any) => {
     }
     return (
         <div className="cardPage">
-            <p>Name</p>
-            <h2>Content title</h2>
+            <p>Username</p>
+            <h3>Content title</h3>
             <Card 
             src= {data.image}
             title={data.title}

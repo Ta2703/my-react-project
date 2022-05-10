@@ -1,9 +1,13 @@
 .templateTopic {
-    background-color:aqua;
+    color:gray;
     height: 100vh;
     display: flex;
     justify-content: center;
-    margin-left: 30px;
+    margin: 100px auto;
+    align-items: center;
+    width: 20%;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .temlateTitle {
@@ -11,8 +15,14 @@
     flex-direction: column;
     align-items: center;
     margin-top: 300px;
+    color: blue;
 
 }
 p{
     padding: 30px;
+}
+
+.btnTemplate {
+    box-sizing: border-box;
+    width: 150px;
 }

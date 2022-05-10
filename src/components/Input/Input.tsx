@@ -2,7 +2,11 @@ import React from "react";
 import "./Input.css";
 
 const Input = (props: any) => {
-    return <input className={props.className} type={props.type} id={props.id}/>
+    return <input 
+    className={props.className} 
+    type={props.type} 
+    required={props.required}
+    onChange={props.onChange}/>
 };
 
 export default Input;
