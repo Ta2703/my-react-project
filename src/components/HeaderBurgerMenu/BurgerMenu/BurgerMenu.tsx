@@ -1,10 +1,12 @@
 import React from "react";
 import './BurgerMenu.css';
 import {slide as Header} from "react-burger-menu";
+import { NavLink } from 'react-router-dom'
+
 
 export default (props: any) => {
     return (
-    <Header> 
+    <NavLink>
         <a className="menuItem" href="/all posts">
             All posts
         </a>
@@ -17,6 +19,6 @@ export default (props: any) => {
         <a className="menuItem" href="/log out">
             Log out
         </a>
-    </Header>
+    </NavLink>
     );
 };

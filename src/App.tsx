@@ -7,12 +7,16 @@ import Confirmation from './pages/Confirmation';
 import Template from './pages/Template';
 import CardPage from './pages/CardPage';
 import Header from './components/Header';
-import BurgerMenu from './components/BurgerMenu';
+import BurgerMenu from './components/HeaderBurgerMenu/BurgerMenu';
 import { ThemeModeProvider } from './context/ThemeModeProvider';
 import {Theme} from './context/themeModeContext';
-import Login from './pages/Login';
-import Registr from './pages/Registr';
-import HeaderPage from './pages/HeaderPage';
+import Login from './pages/Autorization/Login';
+import Registr from './pages/Autorization/Registr';
+import HeaderPage from './pages/Autorization/HeaderPage';
+import Router from './pages/Router';
+import classNames from 'classnames';
+import {useState} from 'react';
+
 
 
 // const MOCKDATA = [
@@ -61,17 +65,19 @@ import HeaderPage from './pages/HeaderPage';
 // }
 
 function App() {
-return (
-  <ThemeModeProvider theme={Theme.Light}>
-<div className='App'>
-  <Login />
-</div>
-  
+  const [theme, setTheme] = useState (Theme.Light)
+  const isLightTheme = theme ===Theme.Light;
+  const onChangeTheme = (value: Theme) => {
+  setTheme(value);
+  }
+    return (
+  <ThemeModeProvider theme={theme} onChangeTheme={onChangeTheme}>
+   <div className='App'>
+  <Router/>
+  </div>
   </ThemeModeProvider>
-  // </div>
-
-
-);
-};
+    );
+  }
+  
 
 export default App;

@@ -1,18 +1,28 @@
 import React from "react";
 import './Header.css';
-import BurgerMenu from "../BurgerMenu";
+import { Theme, useThemeContext } from "../../context/themeModeContext";
+import BurgerMenu from "../HeaderBurgerMenu/BurgerMenu";
 // import { wrap } from "module";
 
 const Header = () => {
+    const { theme, onChangeTheme = () => {} } = useThemeContext ()
+    const isLinghtTheme = theme === Theme.Light
+    const onClickTheme = () => {
+        isLinghtTheme ? onChangeTheme(Theme.Dark) : onChangeTheme(Theme.Light)
+    }
     return (
-        <header id="outer-container">
+        <header className={isLinghtTheme ? "header" : "header _dark"}>
+            <div className="headerContainer">
+                <div className="menuIcon">
             <BurgerMenu pageWrapId={'page-wrap'} outerContainerId={'outer-container'}/>
-            <div id="page-wrap">
-            <div className="header">
                 <span>
                     <i className="fa-regular fa-user headerItem"></i>
                 </span>
-                <span className="headerItem">Username</span>
+                </div>
+                <h3>User Name</h3>
+                <div className="checkboxGroup">
+                    <input type="checkbox" className="checkbox" id="checkbox"/>
+                    <label onClick={onClickTheme} className="checkboxLabel" htmlFor="checkbox"/>
             </div>;
             </div>
         </header>

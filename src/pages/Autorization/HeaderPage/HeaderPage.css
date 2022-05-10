@@ -1,0 +1,36 @@
+.headerPage {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.line {
+    border-right: 2px solid grey;
+    height: 30px;
+}
+.btnHeader {
+    font-weight: bold;
+    font-size: 28px;
+  }
+  
+  .dark .btnHeader {
+    color: #5d5485;
+  }
+  .activeLink {
+    color: #5d5485;
+  }
+  .dark .activeLink {
+    color: aliceblue;
+  }
+  .wrapperHeader {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  
+  .line {
+    border-right: 2px solid #5d5485;
+    height: 30px;
+  }

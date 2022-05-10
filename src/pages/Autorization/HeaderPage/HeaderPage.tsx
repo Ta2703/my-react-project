@@ -1,6 +1,6 @@
 import React, {FC} from "react";
 import './HeaderPage.css';
-import Button from "../../components/Button";
+import Button from "../../../components/Button";
 import classNames from 'classnames';
 
 type HeaderPageProps = {

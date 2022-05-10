@@ -1,11 +1,30 @@
-header {
-    display: flex;
-    box-sizing: border-box;
-    justify-content: space-between;
-    font-size: 18px;
-    align-items: flex-end;
+.header {
+  background-color: antiquewhite;
+  height: 80px;
 }
 
+._dark {
+    background-color: rgb(105, 105, 210);
+}
+.headerContainer {
+    align-items: center;
+    display: flex;
+    max-width: 1200px;
+    padding: 0 40 px;
+    margin: 0 auto;
+    gap: 20px;
+
+}
+.checkbox {
+    visibility: hidden;
+}
+.checkboxGroup {
+    position: relative;
+    width: 80px;
+    height: 30px;
+    border-radius: 50px;
+    border: 1px solid blue;
+}
 #page-wrap {
     box-sizing: border-box;
     align-items: flex-end;

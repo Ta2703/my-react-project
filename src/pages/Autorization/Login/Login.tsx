@@ -1,9 +1,9 @@
 import React, {FC, useEffect, useState} from "react";
 import './Login.css';
-import Button from "../../components/Button";
-import Input from "../../components/Input";
+import Button from "../../../components/Button";
+import Input from "../../../components/Input";
 import HeaderPage from "../HeaderPage";
-import Confirmation from "../Confirmation";
+import Confirmation from "../../Confirmation";
 import Regist from "../Registr";
 
 
