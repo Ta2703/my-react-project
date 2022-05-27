@@ -5,12 +5,18 @@ import Input from "../../../components/Input";
 import HeaderPage from "../HeaderPage";
 import Confirmation from "../../Confirmation";
 import Regist from "../Registr";
+import { useDispatch } from "react-redux";
+
+
+
 
 
 type LoginFormProps = {
     onClick: (name: string) => void;
     onConfirmClick: () => void;
 }
+
+
 
 const LoginForm: FC <LoginFormProps> = ({
     onClick,
@@ -21,6 +27,9 @@ const LoginForm: FC <LoginFormProps> = ({
     const [emailError, setEmailError] = useState('');
     const[passError, setPassError] = useState('');
     const[formValid, setFormValid] = useState(false);
+
+
+
 
     useEffect(() => {
         if (emailError || passError) {
@@ -42,6 +51,8 @@ const LoginForm: FC <LoginFormProps> = ({
         }
     };
     
+    
+   
     const passValid = (event: any) => {
         event.preventDefault ();
         setPass(event.target.value)
@@ -54,6 +65,15 @@ const LoginForm: FC <LoginFormProps> = ({
         }
     }
 
+    const dispatch = useDispatch();
+
+
+    
+    const onClickPlus = (isPlus: boolean) => {
+        const PLUS_ACTION = { type: "counter/incremented" };
+        const MINUS_ACTION = { type: "counter/decremented" };
+        dispatch(isPlus ? PLUS_ACTION : MINUS_ACTION);
+      };
     return ( 
         <form className="loginForm">
         <div className="loginFormEmail">
@@ -68,8 +88,11 @@ const LoginForm: FC <LoginFormProps> = ({
             {passError && <div className='err'>{passError}</div>}
         </div>
     
+        {/* <Button className="btn" value={"ПЛЮС"} onClick={()=>onClickPlus(true)}/>;
+    <Button className="btn" value={"МИНУС"} onClick={()=>onClickPlus(false)}/>; */}
+
             <Button disabled={!formValid} 
-            className='btnLoginConfirm' 
+            // className='btnLoginConfirm' 
             btnText='Login' onClick={() => {}}  />
             <div className="loginForgot">
         <p className="loginForgotText">Forgot your password?</p>
@@ -99,7 +122,9 @@ const Login = () => {
       ) : (
          <Confirmation />
   )
-      };
+      }
+
+
 
 
 
@@ -126,4 +151,4 @@ const Login = () => {
 //     )
 // };
 
-export default Login;
+export default Login

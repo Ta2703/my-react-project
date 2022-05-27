@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
 import Input from './components/Input';
 import Button from './components/Button';
 import PostCard from './components/PostCard';
@@ -16,6 +18,7 @@ import HeaderPage from './pages/Autorization/HeaderPage';
 import Router from './pages/Router';
 import classNames from 'classnames';
 import {useState} from 'react';
+import Autorization from './pages/Autorization';
 
 
 
@@ -66,18 +69,19 @@ import {useState} from 'react';
 
 function App() {
   const [theme, setTheme] = useState (Theme.Light)
-  const isLightTheme = theme ===Theme.Light;
+  // const isLightTheme = theme ===Theme.Light;
   const onChangeTheme = (value: Theme) => {
   setTheme(value);
-  }
+  };
     return (
+      <Provider store={store}>
   <ThemeModeProvider theme={theme} onChangeTheme={onChangeTheme}>
    <div className='App'>
-  <Router/>
+   <Router />
   </div>
   </ThemeModeProvider>
-    );
-  }
-  
+  </Provider>
+    )}
+ 
 
 export default App;
