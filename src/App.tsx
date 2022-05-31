@@ -4,7 +4,6 @@ import { Provider } from "react-redux";
 import { store } from "./redux/store";
 import Input from './components/Input';
 import Button from './components/Button';
-import PostCard from './components/PostCard';
 import Confirmation from './pages/Confirmation';
 import Template from './pages/Template';
 import CardPage from './pages/CardPage';
@@ -19,6 +18,7 @@ import Router from './pages/Router';
 import classNames from 'classnames';
 import {useState} from 'react';
 import Autorization from './pages/Autorization';
+import CardPost from './components/CardPost';
 
 
 

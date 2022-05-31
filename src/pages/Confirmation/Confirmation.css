@@ -11,7 +11,56 @@
    gap: 20px;
 
 }
-.title h2 {
+
+.confirmation {
+    padding-top: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    color: #5d5485;
+    height: 100vh;
+}
+
+.confirmationDark {
+    background-color: #240915;
+}
+
+.confirmationTitle {
+    color: #ad9fe9;
+}
+
+.confirmationMessage {
+    display: flex;
+    flex-wrap: wrap;
+    width: 15%;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btnConfirmation {
+    margin-top: 30px;
+    padding: 8px;
+    width: 180px;
+    border: 2px solid yellow;
+    outline: none;
+    border-radius: 50px;
+    text-align: center;
+    background-color: #4227ba;
+    color: white;
+    cursor: pointer;
+}
+
+.btnLink {
+    color: #4227ba;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+/* .title h2 {
     color: aqua;
 }
 
@@ -38,4 +87,4 @@ span {
     color: white;
     background-color: aqua;
     cursor: pointer;
-}
+} */

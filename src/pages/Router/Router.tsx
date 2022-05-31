@@ -1,15 +1,11 @@
 import React from "react";
 
 import { Route, Navigate, BrowserRouter, Routes } from "react-router-dom";
-import Header from "../../components/Header";
 // import Information from "../Information";
-
 import HeaderBurgerMenu from '../../components/HeaderBurgerMenu'
 import Information from "../Information";
-import PostCard from '../../components/PostCard';
 import Authorization from "../Autorization";
 import Confirmation from "../Confirmation";
-import Registr from "../Autorization/Registr";
 import CardPage from "../CardPage";
 
 
@@ -23,13 +19,14 @@ const Router = () => {
     {isLoggedIn?(
         <Routes> 
         <Route path={'/'} element={<HeaderBurgerMenu/>}>
-            <Route path={'cards-list'} element={<CardPage />}/>
-            <Route path={'cards-list/:id'} element={<PostCard/>}/>
+            <Route path={'/cards-list'} element={<CardPage />}/>
             
-            <Route path={'info'} element={<Information/>}/>
+            <Route path={'/info'} element={<Information/>}/>
+
+        {/* <Route path="*" element={<Navigate to={"/"} replace/>} /> */}
         </Route>
         <Route path="*" element={<Navigate to={"/"} replace/>} />
-        </Routes>
+              </Routes>
      ) : ( 
      <Routes> 
          <Route path ="*" element={<Navigate to={"/auth"} replace/>} />

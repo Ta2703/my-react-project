@@ -4,7 +4,7 @@ import Card from '../../components/Card';
 import { match } from "assert";
 
 const CardPage = (props:any) => {
-    const data ={ 
+    const data = [{
         id: Math.random(),
         image: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" ,
         text: "Lorem ipsum dolor sit amet consectetur.",
@@ -12,16 +12,14 @@ const CardPage = (props:any) => {
         lesson_num: 0,
         title: "What is Lorem Ipsum",
         author: 0,
-    }
+
+    }]
     return (
         <div className="cardPage">
             <p>Username</p>
             <h3>Content title</h3>
             <Card 
-            src= {data.image}
-            title={data.title}
-            text={data.text}
-            date={data.date}
+            data={data}
             >
             </Card>
 
