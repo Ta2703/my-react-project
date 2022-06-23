@@ -13,7 +13,7 @@ return (
         <br/>
         Please check your email
 </p>
-<Button className='btnConfirmation' text={'Home'}></Button>
+<Button className='btnConfirmation' btnText={'Home'}></Button>
     </div>
 )
 };

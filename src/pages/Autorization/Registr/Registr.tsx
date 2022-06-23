@@ -92,6 +92,6 @@ if (setPass(event.target.value) != setPassConfirm(event.target.value)){
             </p>
         </div>
     )
-};
+}
 
 export default Registr;

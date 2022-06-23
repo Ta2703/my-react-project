@@ -22,8 +22,8 @@ const Authorization = () => {
     
         return  (
           <div className={classNames( {['auth-wrapper']:isLightTheme}, {['auth-wrapper dark'] : !isLightTheme})}>
-        <Router/>
-        <HeaderPage onClick={onButtonClick} activeTab={tabName} />
+    
+        {/* <HeaderPage onClick={onButtonClick} activeTab={tabName} /> */}
     {tabName === 'login' ? (
         <Login 
 

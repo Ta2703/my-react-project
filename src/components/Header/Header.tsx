@@ -2,6 +2,7 @@ import React from "react";
 import './Header.css';
 import { Theme, useThemeContext } from "../../context/themeModeContext";
 import BurgerMenu from "../HeaderBurgerMenu/BurgerMenu";
+import { Outlet } from "react-router-dom";
 // import { wrap } from "module";
 
 const Header = () => {
@@ -11,6 +12,7 @@ const Header = () => {
         isLinghtTheme ? onChangeTheme(Theme.Dark) : onChangeTheme(Theme.Light)
     }
     return (
+        <div>
         <header className={isLinghtTheme ? "header" : "header _dark"}>
             <div className="headerContainer">
                 <div className="menuIcon">
@@ -26,8 +28,10 @@ const Header = () => {
             </div>;
             </div>
         </header>
-    );
-}
+        <Outlet />
+    </div>
+    ); 
+} 
 ;
 
 
