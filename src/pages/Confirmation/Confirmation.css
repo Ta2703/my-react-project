@@ -1,4 +1,56 @@
+.registration-wrapper {
+    padding-top: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    color: #5d5485;
+    font-family: "Courier";
+    height: 100vh;
+  }
+  .dark .registration-wrapper {
+    background-color: #240915;
+  }
+  .registration-title {
+    color: #5d5485;
+  }
+  .dark .registration-title {
+    color: white;
+  }
+  .registration-text {
+    display: flex;
+    flex-wrap: wrap;
+    width: 15%;
+    text-decoration: none;
+    text-align: center;
+  }
+  .dark .registration-text {
+    color: white;
+  }
+  
+  .btn-registration {
+    margin-top: 30px;
+    padding: 8px;
+    width: 180px;
+    border: 2px solid #fdd892;
+    outline: none;
+    border-radius: 50px;
+    text-align: center;
+    background-color: #5d5485;
+    color: white;
+    cursor: pointer;
+    font-family: "Courier";
+  }
+  .btnLink {
+    font-family: "Courier";
+    color: #5d5485;
+    text-decoration: none;
+    font-weight: bold;
+  }
 
+
+/* 
 .confirmation{
     flex-direction: column;
     gap: 40px;
@@ -56,7 +108,7 @@
     color: #4227ba;
     text-decoration: none;
     font-weight: bold;
-}
+} */
 
 
 

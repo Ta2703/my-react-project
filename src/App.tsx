@@ -6,7 +6,6 @@ import Input from './components/Input';
 import Button from './components/Button';
 import Confirmation from './pages/Confirmation';
 import Template from './pages/Template';
-import CardPage from './pages/CardPage';
 import Header from './components/Header';
 import BurgerMenu from './components/HeaderBurgerMenu/BurgerMenu';
 import { ThemeModeProvider } from './context/ThemeModeProvider';

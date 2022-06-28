@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
 import './Information.css';
-import HeaderBurgerMenu from '../../components/HeaderBurgerMenu';
-import Header from '../../components/Header';
-import classNames from 'classnames';
+import classNames from "classnames";
 import { Theme, useThemeContext} from '../../context/themeModeContext';
 import Button from '../../components/Button';
 
