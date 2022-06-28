@@ -1,0 +1,17 @@
+.contentContainer {
+    padding: 20px 30px;
+    height: 100vh;
+  }
+  
+  .contentTitle {
+    font-size: 24px;
+    padding-left: 0px;
+    color: #5d5485;
+    font-weight: 700;
+  }
+  .dark .contentTitle {
+    color: #f8f2e7;
+  }
+  .cardPostContent {
+    margin-top: 20px;
+  }

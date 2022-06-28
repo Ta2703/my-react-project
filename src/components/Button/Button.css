@@ -1,4 +1,15 @@
 button {
+    outline: none;
+    border: none;
+    background: none;
+    text-align: center;
+    color: #796da4;
+    cursor: pointer;
+    font-family: "Courier";
+  }
+
+
+/* button {
     width: 230px;
     height: 40px;
     border-radius: 20px;
@@ -10,4 +21,4 @@ button {
     text-align: center;
     margin-top: 10px;
     cursor: pointer;
-}
+} */

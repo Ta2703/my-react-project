@@ -91,9 +91,9 @@ const LoginForm: FC <LoginFormProps> = ({
         {/* <Button className="btn" value={"ПЛЮС"} onClick={()=>onClickPlus(true)}/>;
     <Button className="btn" value={"МИНУС"} onClick={()=>onClickPlus(false)}/>; */}
 
-            <Button disabled={!formValid} 
+            <Button disabled={!formValid}
             // className='btnLoginConfirm' 
-            btnText='Login' onClick={() => {}}  />
+            btnText='Login' onClick={() => { } } className={"btnLoginConfirm'"}  />
             <div className="loginForgot">
         <p className="loginForgotText">Forgot your password?</p>
         <a href="#reset" className="loginReset">Reset password</a>
