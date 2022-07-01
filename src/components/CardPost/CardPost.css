@@ -1,0 +1,71 @@
+.btnsCardFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    text-decoration: none;
+  }
+  
+  .btnSave {
+    margin-left: 30px;
+  }
+  
+  .btnLike,
+  .btnDislike,
+  .btnSave {
+    color: #5d54854f;
+  }
+  .btnEye {
+    color: #5d5485;
+  }
+  
+  .activeBtn {
+    color: #3a393f;
+  }
+  
+  .dark .btnLike,
+  .dark .btnSave,
+  .dark .btnDislike,
+  .dark .btnEye {
+    color: #e8e3da;
+  }
+
+/* .post {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cardPost {
+    width: 300px;
+    height: 300px;
+    border: solid 1px black;
+    padding: 25px;
+    border-radius: 8px;
+    margin: 15px;
+}
+
+.imgCard {
+    width: 300px;
+    height: 180px;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+
+.titleCard {
+    font-size: 26px;
+}
+
+.textCard {
+    font-size: 14px;
+    color: black;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.datteCard {
+    font-size: 14px;
+    color: black;
+} */

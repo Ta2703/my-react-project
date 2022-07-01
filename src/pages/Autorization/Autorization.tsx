@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import Button from '../../components/Button';
-import Input from '../../components/Input';
+
 import './Autorization';
-import HeaderPage from './HeaderPage';
-import Confirmation from '../Confirmation';
+
 import Login from './Login';
 import Registr from './Registr';
-import Router from '../Router';
+
 import { Theme, useThemeContext } from '../../context/themeModeContext';
 import classNames from 'classnames';
 
@@ -32,7 +30,7 @@ const Authorization = () => {
         />
     ):(
         <Registr onClick={onButtonClick} onConfirmClick={onClickRegister} />
-    )};
+    )}
          </div>
        
     )

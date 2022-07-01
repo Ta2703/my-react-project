@@ -1,7 +1,6 @@
 import React from "react";
 import './Template.css';
 import Button from "../../components/Button";
-import Input from "../../components/Input";
 
 const Template = () => {
     return (

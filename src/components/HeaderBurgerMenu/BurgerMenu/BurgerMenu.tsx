@@ -1,24 +1,33 @@
 import React from "react";
 import './BurgerMenu.css';
-import {slide as Header} from "react-burger-menu";
-import { NavLink } from 'react-router-dom'
+import { elastic as HeaderBurgerMenu } from "react-burger-menu";
+import { NavLink } from 'react-router-dom';
+import {logout} from "../../../redux/reducers/authReducer";
+import { useDispatch } from "react-redux";
 
 
 export default (props: any) => {
+    const dispatch = useDispatch();
+
+// export default (props: any) => {
+    const removeItem = () => {
+        dispatch(logout({}));
+      };
+
     return (
-    <NavLink>
-        <a className="menuItem" href="/all posts">
+        <HeaderBurgerMenu>
+    <NavLink className="menuItem" to="/all posts">
             All posts
-        </a>
-        <a className="menuItem" href="/my posts">
+            </NavLink>
+    <NavLink className="menuItem" to="/my posts">
             My posts
-        </a>
-        <a className="menuItem" href="/add posts">
+        </NavLink>
+    <NavLink className="menuItem" to="/add posts">
             Add posts
-        </a>
-        <a className="menuItem" href="/log out">
+        </NavLink>
+        <NavLink className="menuItem" to="/log out">
             Log out
-        </a>
-    </NavLink>
+        </NavLink>
+    </HeaderBurgerMenu>
     );
 };

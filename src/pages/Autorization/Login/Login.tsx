@@ -6,6 +6,7 @@ import HeaderPage from "../HeaderPage";
 import Confirmation from "../../Confirmation";
 import Regist from "../Registr";
 import { useDispatch } from "react-redux";
+import { loginUser } from "../../../redux/reducers/authReducer";
 
 
 
@@ -23,7 +24,7 @@ const LoginForm: FC <LoginFormProps> = ({
     onConfirmClick
 }) => {
     const [email, setEmail] = useState('');
-    const [pass, setPass] = useState(Number);
+    const [pass, setPass] = useState('');
     const [emailError, setEmailError] = useState('');
     const[passError, setPassError] = useState('');
     const[formValid, setFormValid] = useState(false);
@@ -66,6 +67,10 @@ const LoginForm: FC <LoginFormProps> = ({
     }
 
     const dispatch = useDispatch();
+    const onClickLogin = (event: any) => {
+        event.preventDefault()
+      dispatch(loginUser({ email, password: pass }));
+    };
 
 
     
@@ -78,22 +83,25 @@ const LoginForm: FC <LoginFormProps> = ({
         <form className="loginForm">
         <div className="loginFormEmail">
             <p>Email</p>
-            <Input  type='email' required='required' value={email} onChange={emailValid} />
+            <Input  type='email' required={true} value={email} onChange={emailValid} />
             {emailError && <div className='err'>{emailError}</div>}
         </div>
     
         <div className="loginFormPassword">
             <p>Password</p>
-            <Input   type='password' required='required' value={pass} onChange={passValid} />
+            <Input   type='password' required={true} value={pass} onChange={passValid} />
             {passError && <div className='err'>{passError}</div>}
         </div>
     
         {/* <Button className="btn" value={"ПЛЮС"} onClick={()=>onClickPlus(true)}/>;
     <Button className="btn" value={"МИНУС"} onClick={()=>onClickPlus(false)}/>; */}
 
-            <Button disabled={!formValid} 
-            // className='btnLoginConfirm' 
-            btnText='Login' onClick={() => {}}  />
+<Button
+  disabled={!formValid}
+  btnText="Login"
+  onClick={onClickLogin}
+  className={"btnLoginConfirm'"}
+/>
             <div className="loginForgot">
         <p className="loginForgotText">Forgot your password?</p>
         <a href="#reset" className="loginReset">Reset password</a>

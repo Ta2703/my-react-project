@@ -15,12 +15,10 @@ const Toggle = () => {
     }
  return (
 <label className="switch">
-  <Input type="checkbox"  
-  className='themeBtn'/>
+  <Input type="checkbox" className='themeBtn'/>
 
   <span 
-  className="router round" 
-  onClick= {onClickTheme} >
+  className="router round" onClick= {onClickTheme} >
   </span>
 
 </label>
