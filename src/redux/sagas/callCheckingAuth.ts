@@ -1,7 +1,7 @@
 //@ts-nocheck
 import { call, put } from "redux-saga/effects";
 import { verifyToken, getNewAccessToken } from "../api/index";
-import { setLogOut } from "../reducers/authReducer";
+import { logout } from "../reducers/authReducer";
 export function* callCheckingAuth(api, ...rest) {
 
   const accessToken = localStorage.getItem("jwtAccessToken");
@@ -14,7 +14,7 @@ export function* callCheckingAuth(api, ...rest) {
     const { status: refreshStatus } = yield call(verifyToken, refreshToken);
 
     if (refreshStatus === 401) {
-      yield put(setLogOut(""));
+      yield put(logout(""));
     } else if (accessStatus === 401) {
       const { status, data } = yield call(getNewAccessToken, refreshToken);
       if (status === 200 && data.access && data.access.length > 0) {
@@ -22,7 +22,7 @@ export function* callCheckingAuth(api, ...rest) {
         const refreshedResponse = yield call(api, data.access, ...rest);
         return refreshedResponse;
       } else {
-        yield put(setLogOut(""));
+        yield put(logout(""));
       }
     } else {
       return response;

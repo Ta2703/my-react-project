@@ -34,7 +34,7 @@ type CardPostProps = {
 };
 
 const CardPost: FC<CardPostProps> = ({
-  image = "https://slovnet.ru/wp-content/uploads/2018/11/21-42.jpg",
+  image = "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
   title,
   text,
   date,

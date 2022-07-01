@@ -30,7 +30,7 @@ const Authorization = () => {
         />
     ):(
         <Registr onClick={onButtonClick} onConfirmClick={onClickRegister} />
-    )};
+    )}
          </div>
        
     )
